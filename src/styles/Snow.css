@@ -1,0 +1,43 @@
+.snow-container{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:1;   /* was 0 — bumped so it shows above section backgrounds like .hero */
+}
+
+.snowflake{
+
+    position:absolute;
+
+    top:-20px;
+
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:
+    0 0 10px white,
+    0 0 20px rgba(255,255,255,.7);
+
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+
+0%{
+
+transform:translate(0, -20px);
+
+}
+
+100%{
+
+transform:translate(var(--drift, 0px), 110vh);
+
+}
+
+}

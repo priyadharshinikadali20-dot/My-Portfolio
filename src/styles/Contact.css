@@ -1,0 +1,356 @@
+.contact{
+
+    padding:110px 8%;
+
+    background:
+    radial-gradient(circle at top left,
+    rgba(56,189,248,.08),
+    transparent 40%),
+
+    radial-gradient(circle at bottom right,
+    rgba(99,102,241,.08),
+    transparent 40%),
+
+    #08111F;
+
+    color:white;
+
+}
+
+/* ====================== */
+/* DESCRIPTION */
+/* ====================== */
+
+.contact-description{
+
+    max-width:760px;
+
+    margin:25px auto 70px;
+
+    text-align:center;
+
+    color:#CBD5E1;
+
+    line-height:1.9;
+
+    font-size:17px;
+
+}
+
+/* ====================== */
+/* GRID */
+/* ====================== */
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+}
+
+/* ====================== */
+/* CARD */
+/* ====================== */
+
+.contact-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:38px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.45s;
+
+}
+
+.contact-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:230px;
+
+    height:230px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(#38BDF8,transparent);
+
+    opacity:.08;
+
+    right:-120px;
+
+    top:-120px;
+
+    transition:.5s;
+
+}
+
+.contact-card:hover::before{
+
+    transform:scale(1.6);
+
+}
+
+.contact-card:hover{
+
+    transform:
+
+    translateY(-12px)
+
+    scale(1.02);
+
+    border-color:#38BDF8;
+
+    box-shadow:
+
+    0 25px 60px rgba(56,189,248,.25);
+
+}
+
+/* ====================== */
+/* ICON */
+/* ====================== */
+
+.contact-icon{
+
+    width:82px;
+
+    height:82px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    font-size:36px;
+
+    margin-bottom:28px;
+
+    transition:.35s;
+
+}
+
+.contact-card:hover .contact-icon{
+
+    transform:
+
+    scale(1.12)
+
+    rotate(-8deg);
+
+}
+
+/* ====================== */
+
+.contact-card h3{
+
+    font-size:28px;
+
+    margin-bottom:14px;
+
+}
+
+.contact-card p{
+
+    color:#CBD5E1;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+    word-break:break-word;
+
+}
+
+/* ====================== */
+/* BUTTON */
+/* ====================== */
+
+.contact-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px 22px;
+
+    border-radius:14px;
+
+    background:
+
+    linear-gradient(135deg,#38BDF8,#6366F1);
+
+    color:white;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.contact-card:hover .contact-btn{
+
+    transform:translateX(8px);
+
+    box-shadow:
+
+    0 15px 35px rgba(56,189,248,.35);
+
+}
+
+/* ====================== */
+/* FOOTER CTA */
+/* ====================== */
+
+.contact::after{
+
+    content:"Looking forward to building something amazing together 🚀";
+
+    display:block;
+
+    margin-top:80px;
+
+    text-align:center;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#38BDF8;
+
+    letter-spacing:.5px;
+
+}
+
+/* ====================== */
+/* RESPONSIVE */
+/* ====================== */
+
+@media(max-width:900px){
+
+.contact-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.contact{
+
+padding:90px 6%;
+
+}
+
+.contact-card{
+
+padding:28px;
+
+}
+
+.contact-card h3{
+
+font-size:24px;
+
+}
+
+.contact-icon{
+
+width:70px;
+
+height:70px;
+
+font-size:30px;
+
+}
+
+.contact::after{
+
+font-size:18px;
+
+margin-top:60px;
+
+}
+.contact-card{
+    cursor:pointer;
+}
+}
+/* ====================== */
+/* COPY EMAIL TOAST */
+/* ====================== */
+
+.copy-toast{
+
+    position:fixed;
+
+    right:35px;
+
+    bottom:35px;
+
+    background:linear-gradient(135deg,#38BDF8,#6366F1);
+
+    color:white;
+
+    padding:16px 28px;
+
+    border-radius:14px;
+
+    font-weight:700;
+
+    box-shadow:0 15px 40px rgba(56,189,248,.35);
+
+    animation:toast .35s ease;
+
+    z-index:99999;
+
+}
+
+@keyframes toast{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
